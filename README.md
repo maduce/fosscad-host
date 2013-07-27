@@ -16,20 +16,19 @@ Currently the best way to do this is:
 
 Note: If you already have a defcad-repo, you can copy or move it to ~/defcad-host/ instead of recloning it.
 
-Next you can edit ~/defcad-host/config.cfg if you desire.  The default configs assumes the defcad-host folder is in ~/ so you can avoid changing the configs and move on to the next step.  To create the database and zipped version of the repo:
+Next you can edit ~/defcad-host/config.cfg if you desire.  The default configs assume the defcad-host folder is in ~/ so you can avoid changing the configs and move on to the next step if followed the above instructions.  To create the database and zipped version of the repo (~/defcad-host/zippedpack/):
 ```bash
 :~$ sh hostpack.sh --generate 
 ```
-
 To update the zippedpack and database:
 ```bash
 :~$ sh hostpack.sh --update
 ```
-See ~/defcad-repo/hostpack.sh for more options.  To delete the zippedpack and the database (starting from scratch, but not deleting the defcad-repo): 
+See ~/defcad-repo/hostpack.sh for more options.  To delete the zippedpack and the database (i.e., starting from scratch, but not deleting the ~/defcad-host/defcad-repo/ folder), run: 
 ```bash
 :~$ sudo hostpack.sh --delete
 ```
-If you do this you will need to generate the zippedpack again before you update.
+If you use --delete you will need to generate the zippedpack again before you update.
 
 Note: This is VERY MUCH a work in progress and has little use at this time.
 
