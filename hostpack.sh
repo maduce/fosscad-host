@@ -60,7 +60,7 @@ case "$1" in
       ;;
    *)
       echoc yellow "* Usages:"
-      echoc yellow "** $0 options are: --generate (-g) or --update (-u)"
+      echoc yellow "** $0 options are: --generate (-g) --update (-u) and --delete (-d)"
       RETVAL=1
 esac;
 
