@@ -7,10 +7,12 @@ Generates a website that will update itself with the lastest from defcad-repo
 
 Currently the best way to do this is:
 
+```bash
 :~$ cd ~/
 :~$ git clone https://github.com/maduce/defcad-host.git
 :~$ cd defcad-host
 :~$ git clone https://github.com/maduce/defcad-repo.git
+```
 
 Note: If you already have a defcad-repo, you can copy or move it to ~/defcad-host/ instead of recloning it.
 
