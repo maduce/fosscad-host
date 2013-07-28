@@ -1,0 +1,4 @@
+# TODOs 
+* improve the php website 
+* Fix the categories issue.  Currently categories can be added but the script does not deal with deleted categories.
+
