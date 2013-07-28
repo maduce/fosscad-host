@@ -16,7 +16,7 @@ Currently the best way to do this is:
 
 Note: If you already have a defcad-repo, you can copy or move it to ~/defcad-host/ instead of recloning it.
 
-Next you can edit ~/defcad-host/config.cfg if you desire.  The default configs assume the defcad-host folder is in ~/ so you can avoid changing the configs and move on to the next step if followed the above instructions.  To create the database and zipped version of the repo (~/defcad-host/zippedpack/):
+Next you can edit ~/defcad-host/config.cfg if you desire.  The default configs assume the defcad-host folder is in ~/ so you can avoid changing the configs and move on to the next step if you followed the above instructions.  To create the database and a zipped version of the repo (~/defcad-host/zippedpack/):
 ```bash
 :~$ sh hostpack.sh --generate 
 ```
