@@ -351,7 +351,7 @@ $dirs = @array_values($dirs); $files = @array_values($files);
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Directory Listing of <?php echo str_replace('\\', '', dirname(strip_tags($_SERVER['PHP_SELF']))).'/'.$leadon;?></title>
+<title>DEFCAD Files <?php echo str_replace('\\', '', dirname(strip_tags($_SERVER['PHP_SELF']))).'/'.$leadon;?></title>
 <link rel="stylesheet" type="text/css" href="<?php echo $includeurl; ?>dlf/styles.css" />
 <?php
 if($showthumbnails) {
