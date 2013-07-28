@@ -48,7 +48,7 @@ local zipfolder=$2;
 local topfolder=$3;
 
 # create zipfolder
-mkdir -p $zipfolder
+sudo su - $webuser -c "mkdir -p $zipfolder"
 
 for line in $(cat $ziplist);
    do 
@@ -56,13 +56,13 @@ for line in $(cat $ziplist);
       local pathtopart=$(dirname $line);
       local partcategory=$(echo ${pathtopart#$topfolder/});
       local targetpath=$(echo $zipfolder/$partcategory);
-      mkdir -p $targetpath
+      sudo su - $webuser -c "mkdir -p $targetpath"
       clear
       echoc bluel "....Zipping $ziptarget"
       echo " from: $pathtopart"
       echo " to:   $targetpath"
       pushd $pathtopart > /dev/null 2>&1
-      zip -r $targetpath/$ziptarget.zip $pathtopart/$ziptarget > /dev/null 2>&1
+      sudo su - $webuser -c "zip -r $targetpath/$ziptarget.zip $pathtopart/$ziptarget > /dev/null 2>&1"
       popd > /dev/null 2>&1
    done
 }

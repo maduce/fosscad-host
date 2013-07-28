@@ -32,7 +32,8 @@ case "$1" in
       ;;
    --generate|-g)
       echoc yellow "deleting old files"
-      rm -rf $partsdb $partlist $gitziprepo $partcategories
+      rm -rf $partsdb $partlist $partcategories
+      sudo su - $webuser -c "rm -rf $gitziprepo"
       echo "generating DB and Zips"
       # create and populate database.
       echo "****Generating parts list $partlist"
@@ -52,6 +53,7 @@ case "$1" in
       --delete|-d)
       echoc redl "DELETE DATABASE AND STARTING FROM SCRATCH!!"
       rm -rf $partsdb $partlist $gitziprepo $partcategories
+      sudo su - $webuser -c "rm -rf $gitziprepo"
       ;;
    --update|-u)
       echoc grayl "*Checking for updates."
