@@ -1,7 +1,7 @@
 defcad-host
 ===========
 
-Generates a website that will update itself with the lastest from defcad-repo
+Generates a website that will update itself with the lastest from defcad-repo.
 
 #### Instructions
 
@@ -31,6 +31,3 @@ See ~/defcad-repo/hostpack.sh for more options.  To delete the zippedpack and th
 If you use --delete you will need to generate the zippedpack again before you update.
 
 Note: This is VERY MUCH a work in progress and has little use at this time.
-
-#### Todo
-* setup php website
