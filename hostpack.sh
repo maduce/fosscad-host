@@ -52,7 +52,7 @@ case "$1" in
       ;;
       --delete|-d)
       echoc redl "DELETE DATABASE AND STARTING FROM SCRATCH!!"
-      rm -rf $partsdb $partlist $gitziprepo $partcategories
+      rm -rf $partsdb $partlist $partcategories
       sudo su - $webuser -c "rm -rf $gitziprepo"
       ;;
    --update|-u)
