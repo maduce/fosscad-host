@@ -26,7 +26,7 @@ To update the zippedpack and database:
 ```
 See ~/defcad-repo/hostpack.sh for more options.  To delete the zippedpack and the database (i.e., starting from scratch, but not deleting the ~/defcad-host/defcad-repo/ folder), run: 
 ```bash
-:~$ sudo hostpack.sh --delete
+:~$ sh hostpack.sh --delete
 ```
 If you use --delete you will need to generate the zippedpack again before you update.
 
