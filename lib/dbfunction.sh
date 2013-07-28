@@ -217,7 +217,7 @@ if [[ -s $1 ]] ; then
 
    for line in $(cat $1);
       do
-         rm $line;
+         sudo su - $webuser -c "rm $line"
       done
 fi ;
 
