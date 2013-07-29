@@ -510,6 +510,6 @@ function f(n) {
 	?>
   </div>
 </div>
-<div id="copy">Latest DEFCAD Megpack, Check us in IRC or on twitter <a href="http://twitter.com/defcadIRC">@defcadIRC</a>.</div>
+<div id="copy">Latest DEFCAD Megpack, Chat with us in <a href="https://webchat.oftc.net/?randomnick=0&channels=defcad&prompt=1&uio=d4">IRC</a> or on twitter <a href="http://twitter.com/defcadIRC">@defcadIRC</a>.</div>
 </body>
 </html>

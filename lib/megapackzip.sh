@@ -57,7 +57,7 @@ for line in $(cat $ziplist);
       local partcategory=$(echo ${pathtopart#$topfolder/});
       local targetpath=$(echo $zipfolder/$partcategory);
       sudo su - $webuser -c "mkdir -p $targetpath"
-      clear
+      #clear
       echoc bluel "....Zipping $ziptarget"
       echo " from: $pathtopart"
       echo " to:   $targetpath"

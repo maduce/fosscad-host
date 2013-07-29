@@ -316,7 +316,7 @@ if [ -z "$(diff $newlist $partslist)" ]; then
       echoc yellow "changes detected."
    else
       echoc greenl "** Database is up to date \8D/!"
-      rm -f $newlist $addlist $deletelist $deleterowids $deleteziplist $updaterowids $upgradelist $updatelist
+      rm -f $newlist $addlist $deletelist $deleterowids $deleteziplist $updaterowids $upgradelist $updatelist $oldcategorys
       exit
    fi
 fi ;
