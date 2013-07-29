@@ -242,28 +242,28 @@ fi ;
 
 # Where the magic happens
 function updatedb() {
-repo=$1
-categorys=$2
-partslist=$3
-zipfolder=$4
+local repo=$1
+local categorys=$2
+local partslist=$3
+local zipfolder=$4
 
-db=$5
-parts_tablename=$(echo parts)
-repolocation_rowname=$(echo repolocation)
-currentstamp_rowname=$(echo currentstamp)
-laststamp_rowname=$(echo laststamp)
+local db=$5
+local parts_tablename=$(echo parts)
+local repolocation_rowname=$(echo repolocation)
+local currentstamp_rowname=$(echo currentstamp)
+local laststamp_rowname=$(echo laststamp)
 
-newlist=$(echo .newlist.txt)
-deletelist=$(echo .deletelist.txt)
-addlist=$(echo .addlist.txt)
-updatelist=$(echo .updatelist.txt)
+local oldcategorys=$(echo .oldcategorylist.txt)
+local newlist=$(echo .newlist.txt)
+local deletelist=$(echo .deletelist.txt)
+local addlist=$(echo .addlist.txt)
+local updatelist=$(echo .updatelist.txt)
 
-
-updaterowids=$(echo .updaterowids.txt)
-deleterowids=$(echo .deleterowids.txt)
-deleteziplist=$(echo .deleteziplist.txt)
-upgradelist=$(echo .upgradelist.txt)
-upgraderowids=$(echo .upgraderowids.txt)
+local updaterowids=$(echo .updaterowids.txt)
+local deleterowids=$(echo .deleterowids.txt)
+local deleteziplist=$(echo .deleteziplist.txt)
+local upgradelist=$(echo .upgradelist.txt)
+local upgraderowids=$(echo .upgraderowids.txt)
 
 
 # git pull 
@@ -272,18 +272,9 @@ pushd $repo > /dev/null 2>&1;
 git pull
 popd > /dev/null 2>&1;
 
-
-# MegapackZip.sh
-#list_parts $repo $categorys $partslist
-#zipfromlist $partslist $zipfolder $repo
-
-# dbfunctions.sh
 echoc grayl "* Current database: $(basename $db)"
-#createdb $db
-#populatedb $db $partslist $zipfolder $repo
 
-#function derp {
-# update_functions
+cat $categorys > $oldcategorys #backup old $categorys 
 list_parts $repo $categorys $newlist
 textfile_complement $newlist $partslist > $addlist
 delete_blanks $addlist
@@ -359,7 +350,9 @@ echo "....zipping new parts."
 zipfromlist $addlist $zipfolder $repo
 mv $newlist $partslist
 
-rm $addlist $deletelist $deleterowids $deleteziplist $updaterowids $upgradelist $upgraderowids 
+#check for deleted categories and delete trash
+category_deletions $oldcategorys $categorys $zipfolder
+rm $addlist $deletelist $deleterowids $deleteziplist $updaterowids $upgradelist $upgraderowids $oldcategorys
 
 }
 

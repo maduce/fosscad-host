@@ -67,13 +67,34 @@ for line in $(cat $ziplist);
    done
 }
 
-# Input git repo and returns changes after git pull.
-function gitpullchanges() {
+# if category is deleted this will detect it and delete the corresponding zipfolder of said category 
+function category_deletions() {
 
-local gitrepo=$1
+local oldcategorylist=$1
+local newcategorylist=$2
+local zipfolder=$3
 
-echo ".....checking changes."
-git --git-dir=$gitrepo/.git diff --name-status ORIG_HEAD..
+local deletions=$(echo .tmp01$RANDOM)
+
+textfile_complement $oldcategorylist $newcategorylist > $deletions
+# Delete old category folders if $deletion is not empty
+if [ -z "$(diff $newcategorylist $oldcategorylist)" ]; then
+   echoc greenl "+No category changes detected."
+else
+   if [ -s "$deletions" ]; then
+      echoc yellow "*Category changes detected."
+      delete_blanks $deletions
+      for line in $(cat $deletions);
+      do
+         echoc yellow "** Deleting $zipfolder/$line"
+         sudo su - $webuser -c "rm -rf $zipfolder/$line"
+      done
+   else
+      echoc greenl "+Categories have been updated :)"
+   fi
+fi
+
+rm  $deletions
 
 }
 
