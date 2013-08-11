@@ -510,6 +510,6 @@ function f(n) {
 	?>
   </div>
 </div>
-<div id="copy">Latest DEFCAD Megpack, Chat with us in <a href="https://webchat.oftc.net/?randomnick=0&channels=defcad&prompt=1&uio=d4">IRC</a> or on twitter <a href="http://twitter.com/defcadIRC">@defcadIRC</a>.</div>
+<div id="copy">The Latest FOSSCAD Library, formally the DEFCAD Megapack, for you viewing pleasure. Chat with us in <a href="https://webchat.oftc.net/?randomnick=0&channels=fosscad&prompt=1&uio=d4">IRC</a> or on twitter <a href="http://twitter.com/fosscad">@fosscad</a>.</div>
 </body>
 </html>
