@@ -2,3 +2,4 @@
 * improve the php website 
 * Add cron script
 * Add update sanity check to prevent updates when no database has been generated.
+* Add remote hosting functionality.
