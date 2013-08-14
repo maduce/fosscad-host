@@ -18,9 +18,13 @@ Currently the fastest way to do this is to open terminal and type the following:
 
 ***Note:*** If you already have a fosscad-repo, you can copy or move it to ~/fosscad-host/ instead of cloning it again.
 
-##### Configure and Generate, Update or Delete the Zip Files.
+##### Configurations
 
-Next you can edit ```~/fosscad-host/config.cfg``` if you desire.  The default configs assume the fosscad-host folder is in ```~/``` so you can avoid changing the configs and move on to the next step if you followed the above instructions.  There is a very simple php website inside of ```~/fosscad-host/web/www/``` which can recursive list the files inside of zippedlib to a webpage.  If you want to use this for a website be sure to move the contents of ```~/fosscad-host/web/www/``` to your web directory and configure ```~/fosscad-host/config.cfg``` to write ```zippedlib``` in that directory.  You can edit the index.php if you would like to customize things or change the name of the folder containing all the zip files. Now, to create the database and a zipped version of the repo (~/fosscad-host/web/www/zippedlib/):
+Next you can edit ```~/fosscad-host/config.cfg``` if you desire.  The default configs assume the fosscad-host folder is in ```~/``` so you can avoid changing the configs and move on to the next step if you followed the above instructions.  There is a very simple php website inside of ```~/fosscad-host/web/www/``` which can recursive list the files inside of zippedlib to a webpage.  If you want to use this for a website be sure to move the contents of ```~/fosscad-host/web/www/``` to your web directory and configure ```~/fosscad-host/config.cfg``` to write ```zippedlib``` in that directory.  You can edit the index.php if you would like to customize things or change the name of the folder containing all the zip files. 
+
+##### Generate, Update or Delete the Zip Files.
+
+Now, to create the database and a zipped version of the repo (~/fosscad-host/web/www/zippedlib/):
 ```bash
 :~$ sh hostlib.sh --generate 
 ```
