@@ -14,7 +14,7 @@ Currently the best way to do this is:
 :~$ git clone https://github.com/maduce/fosscad-repo.git
 ```
 
-Note: If you already have a fosscad-repo, you can copy or move it to ~/fosscad-host/ instead of recloning it.
+***Note*** If you already have a fosscad-repo, you can copy or move it to ~/fosscad-host/ instead of recloning it.
 
 Next you can edit ```~/fosscad-host/config.cfg``` if you desire.  The default configs assume the fosscad-host folder is in ```~/``` so you can avoid changing the configs and move on to the next step if you followed the above instructions.  The ```web``` folder in fosscad-host has a ```www``` folder in it.  There is a very simple php website inside which should work if you write zippedlib directly to ``www```.  You can edit the index.php if you would like to customize things or change the name of the folder containing all the zip files. To create the database and a zipped version of the repo (~/fosscad-host/web/www/zippedlib/):
 ```bash
@@ -37,7 +37,7 @@ There is a separate update script ```cron.sh``` that can be used to check for up
 ```bash
 :~$ sudo crontab -e
 ```
-This might ask you to pick an editor and you can pick you favorite editor, i.e., ```nano```. From then on it will open a text file where you can add the follow to have```cron.sh``` run every 24 hours:
+This might ask you to pick an editor and you can pick you favorite editor, i.e., ```nano```. From then on it will open a text file where you can add the following to have```cron.sh``` run every 24 hours:
 
 ```bash
 0 */24 * * * /home/user/fosscad-host/testing/cron.sh
