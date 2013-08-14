@@ -16,7 +16,7 @@ Currently the best way to do this is:
 
 Note: If you already have a fosscad-repo, you can copy or move it to ~/fosscad-host/ instead of recloning it.
 
-Next you can edit ```~/fosscad-host/config.cfg``` if you desire.  The default configs assume the fosscad-host folder is in ```~/``` so you can avoid changing the configs and move on to the next step if you followed the above instructions.  To create the database and a zipped version of the repo (~/defcad-host/web/www/zippedlib/):
+Next you can edit ```~/fosscad-host/config.cfg``` if you desire.  The default configs assume the fosscad-host folder is in ```~/``` so you can avoid changing the configs and move on to the next step if you followed the above instructions.  The ```web``` folder in fosscad-host has a ```www``` folder in it.  There is a very simple php website inside which should work if you write zippedlib directly to ``www```.  You can edit the index.php if you would like to customize things or change the name of the folder containing all the zip files. To create the database and a zipped version of the repo (~/fosscad-host/web/www/zippedlib/):
 ```bash
 :~$ sh hostlib.sh --generate 
 ```
@@ -28,7 +28,7 @@ See ~/fosscad-repo/hostpack.sh for more options.  To delete the zippedlib and th
 ```bash
 :~$ sh hostlib.sh --delete
 ```
-If you use --delete you will need to generate the zippedpack again before you update.
+If you use --delete you will need to generate the zippedlib folder again before you update.
 
 ##### Setup Cron Update.
 
@@ -46,4 +46,4 @@ to add a log file, i.e., ```/path/to/logfile.log```, you can add the following t
 
 ```0 */24 * * * /home/user/fosscad-host/testing/cron.sh  2>&1 >> /path/to/logfile.log```
 
-
+have fun...
