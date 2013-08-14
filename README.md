@@ -3,9 +3,9 @@ defcad-host
 
 Generates a website that will update itself with the lastest from fosscad-repo.
 
-### Instructions
+## Instructions
 
-##### Get The tools.
+##### Get The tools:
 
 Currently the fastest way to do this is to open terminal and type the following:
 
@@ -18,11 +18,11 @@ Currently the fastest way to do this is to open terminal and type the following:
 
 ***Note:*** If you already have a fosscad-repo, you can copy or move it to ~/fosscad-host/ instead of cloning it again.
 
-##### Configurations
+##### Configurations:
 
 Next you can edit ```~/fosscad-host/config.cfg``` if you desire.  The default configs assume the fosscad-host folder is in ```~/``` so you can avoid changing the configs and move on to the next step if you followed the above instructions.  There is a very simple php website inside of ```~/fosscad-host/web/www/``` which can recursive list the files inside of zippedlib to a webpage.  If you want to use this for a website be sure to move the contents of ```~/fosscad-host/web/www/``` to your web directory and configure ```~/fosscad-host/config.cfg``` to write ```zippedlib``` in that directory.  You can edit the index.php if you would like to customize things or change the name of the folder containing all the zip files. 
 
-##### Generate, Update or Delete the Zip Files.
+##### Generate, Update or Delete the Zip Files:
 
 Now, to create the database and a zipped version of the repo (~/fosscad-host/web/www/zippedlib/):
 ```bash
@@ -38,7 +38,7 @@ See ~/fosscad-repo/hostpack.sh for more options.  To delete the zippedlib and th
 ```
 If you use --delete you will need to generate the zippedlib folder again before you update.
 
-##### Setup Cron Update.
+##### Setup Cron Update:
 
 There is a separate update script ```cron.sh``` that can be used to check for updates instead of running ``` sh hostlib.sh --update``` manually. YOU MUST CONFIGURE THIS SCRIPT BEFORE USING IT OR ELSE IT WILL NOT WORK.  Be sure to make the cron script executable (i.e., ```chmod u+x cron.sh```) and to add the cron as root (i.e., ```sudo crontab -e```).  The cron script will not work unless it is run with root. For example, after configuring ```cron.sh```, you can add it to cron by:
 
