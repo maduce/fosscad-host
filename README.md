@@ -1,4 +1,4 @@
-defcad-host
+fosscad-host
 ===========
 
 Generates a website that will update itself with the lastest from fosscad-repo.
