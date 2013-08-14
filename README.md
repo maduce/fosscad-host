@@ -30,4 +30,20 @@ See ~/fosscad-repo/hostpack.sh for more options.  To delete the zippedlib and th
 ```
 If you use --delete you will need to generate the zippedpack again before you update.
 
-Note: This is VERY MUCH a work in progress and has little use at this time.
+##### Setup Cron Update.
+
+There is a separate update script ```cron.sh``` that can be used to check for updates instead of running ``` sh hostlib.sh --update``` manually. YOU MUST CONFIGURE THIS SCRIPT BEFORE USING IT OR ELSE IT WILL NOT WORK.  Be sure to make the cron script executable (i.e., ```chmod u+x cron.sh```) and to add the cron as root (i.e., ```sudo crontab -e```).  The cron script will not work unless it is run with root. For example, after configuring ```cron.sh```, you can add it to cron by:
+
+```bash
+:~$ sudo crontab -e
+```
+This might ask you to pick an editor and you can pick you favorite editor, i.e., ```nano```. From then on it will open a text file where you can add the follow to have```cron.sh``` run every 24 hours:
+
+```bash
+0 */24 * * * /home/user/fosscad-host/testing/cron.sh
+```
+to add a log file, i.e., ```/path/to/logfile.log```, you can add the following to your cron:
+
+```0 */24 * * * /home/user/fosscad-host/testing/cron.sh  2>&1 >> /path/to/logfile.log```
+
+
