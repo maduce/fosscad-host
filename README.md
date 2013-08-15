@@ -5,6 +5,10 @@ Generates a website that will update itself with the lastest from fosscad-repo.
 
 ## Instructions
 
+##### Requirements
+* git
+* sqlite3
+
 ##### Get The tools:
 
 Currently the fastest way to do this is to open terminal and type the following:
