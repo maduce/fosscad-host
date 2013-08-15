@@ -59,10 +59,10 @@ local deletions=$(echo .tmp01$RANDOM)
 textfile_complement $oldcategorylist $newcategorylist > $deletions
 # Delete old category folders if $deletion is not empty
 if [ -z "$(diff $newcategorylist $oldcategorylist)" ]; then
-   echoc greenl "+No category changes detected."
+   echoc greenl "+ No category changes detected."
 else
    if [ -s "$deletions" ]; then
-      echoc yellow "*Category changes detected."
+      echoc yellow "* Category changes detected."
       delete_blanks $deletions
       for line in $(cat $deletions);
       do
@@ -70,7 +70,7 @@ else
          rm -rf $zipfolder/$line
       done
    else
-      echoc greenl "+Categories have been updated :)"
+      echoc greenl "+ Categories have been updated :)"
    fi
 fi
 

@@ -7,6 +7,7 @@
 #       gituser and webuser. DO NOT set users to root
 #       but be sure to add this script to roots cron.
 
+
 #########################################
 #### Configuration cron script below ####
 #########################################
@@ -34,13 +35,13 @@ gitziprepo=$(echo "/path/to/zippedlib")
 # Define git user. This is the user that runs hostlib.sh and
 # git clone the repos. DO NOT SET THIS TO "$USER". Use exact
 # usename.
-gituser=$(echo "SETTHISUSERNAME")
+gituser=$(echo "SET-THIS-USERNAME")
 
 # Web server user.  
 # This is the user that writes to zippedlib and when hosting a website
 # is likely the webserver username, i.e., www-data. Set this to whichever
 # username was used in config.cfg but do not use $USER, use exact username.
-webuser=$(echo "SETTHISUSERNAME")
+webuser=$(echo "SET-THIS-USERNAME")
 
 # Hidden file used at runtime.
 # Should be same as in config.cfg.
