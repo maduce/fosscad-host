@@ -81,7 +81,7 @@ local zipfolder=$5
 local db=$6
 
       #go to the script folder
-      echoc grayl "* $(date) Checking for updates."
+      echoc grayl " * $(date) Checking for updates."
       pushd $scriptfolder
       #update Ddatabase and repo
       cron_updatedb $scriptfolder $gitrepodir $categorylist $partlst $zipfolder $db
