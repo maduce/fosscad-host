@@ -16,7 +16,7 @@ Currently the fastest way to do this is to open terminal and type the following:
 ```bash
 :~$ cd ~/
 :~$ git clone https://github.com/maduce/fosscad-host.git
-:~$ cd defcad-host
+:~$ cd fosscad-host
 :~$ git clone https://github.com/maduce/fosscad-repo.git
 ```
 
